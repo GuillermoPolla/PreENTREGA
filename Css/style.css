@@ -1,0 +1,356 @@
+/* Estilos generales para todas las pantallas */
+* {
+    margin: 0;
+    padding: 0;
+ /*    box-sizing: border-box; */
+    /* Incluye el relleno y el borde en el tamaño total del elemento */
+}
+
+body {
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: rgba(192, 71, 11, 0.894);
+}
+
+/* Estilos para pantallas mas chicas, (celulares) */
+@media (max-width: 768px) {
+    .menu-horizontal {
+        padding-left: 10px;
+    }
+
+    .nombre-compania {
+        font-size: 40px;
+    }
+
+    .menu-horizontal>li>a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    /* barra de navegación más compacta */
+    nav {
+        min-height: 100px;
+    }
+
+    .galerias-de-venta {
+        grid-template-columns: repeat(2, 1fr);
+        /* Cambia a dos columnas en vez de tres */
+        row-gap: 4cm;
+        /* Reduce el espacio entre filas */
+        column-gap: 2cm;
+        /* Reduce el espacio entre columnas */
+        margin-top: 2cm;
+        /* Reduce el espacio superior */
+        margin-left: 1cm;
+        /* Reduce el espacio izquierdo */
+        margin-bottom: 5cm;
+        /* Reduce el espacio inferior */
+        margin-right: 1cm;
+        /* Reduce el espacio derecho */
+    }/* Reduce espacios respecto a la pantalla de desktop */
+
+
+    .pie-foto {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+/*Estilo de la barra de navegación*/
+nav {
+    background-color: rgb(148, 14, 4);
+    /*Color de fondo de la barra*/
+    font-size: 18px;
+    min-height: 200px;
+    /*Altura mínima de la barra*/
+
+}
+
+.nombre-compania {
+    font-size: 55px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 300;
+    font-style: oblique;
+    color: rgb(216, 211, 211);
+}
+
+.nombre-compania:hover {
+    text-decoration: underline;
+    color: rgb(216, 211, 211);
+}
+
+
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 55px;
+    padding-left: 185px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.menu-horizontal>li>a {
+    display: flex;
+    padding: 15px 20px;
+    color: rgb(216, 211, 211);
+    text-decoration: none;
+}
+
+.menu-horizontal>li:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(216, 211, 211);
+}
+
+
+.subtitulos1 {
+    text-align: center;
+    padding-top: 5cm;
+    color: rgb(245, 9, 9);
+    text-decoration: none;
+    font-size: 2.8cm;
+    padding-bottom: 6cm;
+
+}
+
+.galeria-index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.imagen-lateral {
+    flex: 0 0 30%;
+    max-width: 100%;
+}
+
+.boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 4%;
+    /*Ancho del borde de lado a lado*/
+    border: 3.5px solid black;
+    /*Ancho del borde,color negro*/
+    border-radius: 70px;
+    /*Borde sin esquinas*/
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    /*Elimina el subrayado del enlace*/
+    padding: 10px 20px;
+    /* Añade espacio interno al botón*/
+}
+
+.boton a {
+    color: red;
+    /* color del texto del boton */
+}
+
+.galeria {
+    display: grid;
+    /* Crea una cuadrícula para poner las imágenes */
+    grid-template-columns: repeat(3, 1fr);
+    /* Divide la cuadrícula en 3 columnas iguales */
+    gap: 10px;
+    /* Espacio entre las imágenes */
+}
+
+.imagen {
+    position: relative;
+    text-align: center;
+}
+
+.imagen img {
+    margin-top: 70px;
+    max-width: 430px;
+    height: auto;
+}
+
+.pie-foto {
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+/*  .galeria img { 
+
+    width: 550px;
+    height: 550px;
+    object-fit: cover; 
+}  */
+
+
+
+/* .btn-outline-primary>li>a {
+    display: flex;
+    padding: 5px 10px;
+    color: rgb(245, 9, 9);
+    text-decoration: none;
+
+}
+
+.btn-outline-primary>li:hover {
+    text-decoration: none;
+    text-decoration-color: bl;
+
+} */
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.788);
+    min-height: 180px;
+    color: black;
+    padding-top: 0cm;
+
+}
+
+.footer-links {
+    padding-top: 2cm;
+    padding-left: 5cm;
+    padding-right: 5cm;
+    color: rgb(245, 9, 9);
+    text-decoration: none;
+    font-size: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*Estilo de cada enlace en el footer*/
+.footer-links>li>a {
+    display: flex;
+    padding: 15px 20px;
+    color: rgb(215, 211, 216);
+    text-decoration: none;
+}
+
+/* Estilo del enlace al poner el mouse arriba */
+.footer-links>li:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(216, 211, 211);
+}
+
+
+.secciones {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 300;
+    font-style: oblique;
+    padding-top: 55px;
+    padding-left: 185px;
+    padding-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 65px;
+    color: rgb(216, 211, 211);
+}
+
+.galerias-de-venta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 8cm;
+    column-gap: 4cm;
+    justify-content: center;
+    align-items: baseline;
+    align-content: space-around;
+    position: relative;
+    margin-top: 3cm;
+    margin-left: 3cm;
+    margin-bottom: 10cm;
+    margin-right: 2cm;
+
+}
+
+/* .galerias-de-venta>figcaption {
+    margin: 2cm;
+    padding: 5cm;
+    text-align: left;
+    Font-size: 20px;
+
+}
+ */
+
+.galerias-de-venta img {
+    margin: 0 4px;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.ayuda {
+    text-align: left;
+    padding-top: 70px;
+    padding-left: 600px;
+    color: rgb(202, 24, 178);
+    text-decoration: none;
+    font-size: 70px;
+    margin-bottom: 3rem
+}
+
+.titulos {
+    text-align: left;
+
+    padding-top: 20px;
+    padding-left: 600px;
+    color: rgb(202, 24, 178);
+    text-decoration: none;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+.subtitulos2 {
+    text-align: left;
+    text-decoration-line: none;
+    display: block;
+    padding-top: 20px;
+    padding-left: 600px;
+    color: rgb(202, 24, 178);
+    text-decoration: none;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.ayuda-texto {
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    padding-left: 600px;
+    color: rgb(202, 24, 178);
+    font-size: 19px;
+    width: 700px;
+    padding-bottom: 70px;
+}
+
+form {
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    padding-left: 600px;
+    color: rgb(202, 24, 178);
+    font-size: 19px;
+    width: 700px;
+    padding-bottom: 70px;
+    }
+
+.ayuda-contacto {
+    margin: auto;
+    padding-left: 600px;
+    color: rgb(202, 24, 178);
+    font-size: 22px;
+    text-align: left;
+    padding-bottom: 10px;
+
+
+}
+
+
+.derechos-reservados {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
